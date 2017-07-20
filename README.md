@@ -1,4 +1,4 @@
-( This is for Korean User. You could see English translated version of MD but this plugin doesn't support localization. )
+(This is for Korean User. You could see English translated version of MD but this plugin doesn't support localization.)
 
 # HNRPG
 
