@@ -1,0 +1,7 @@
+name: HNRPG
+version: 0.1.0
+author: DevHN
+main: com.devhn.plugin.Main
+commands:
+  hr:
+    description: desc
