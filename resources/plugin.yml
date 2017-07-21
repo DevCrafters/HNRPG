@@ -4,4 +4,4 @@ author: DevHN
 main: com.devhn.plugin.Main
 commands:
   hr:
-    description: desc
+    description:
