@@ -1,6 +1,5 @@
 package com.devhn.plugin;
 
-import com.devhn.plugin.Commands.HelpCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
