@@ -25,6 +25,7 @@ public class HelpCommand extends Command {
     }
 
     private TreeMap<String, Command> commands;
+
     public HelpCommand() {
         commands = new TreeMap<>();
     }
@@ -50,8 +51,7 @@ public class HelpCommand extends Command {
     }
 
     @Override
-    public List<String> getUsageInstructions()
-    {
+    public List<String> getUsageInstructions() {
         return Collections.singletonList("명령어 설명");
     }
 
