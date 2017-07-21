@@ -1,7 +1,6 @@
 package com.devhn.plugin.Commands;
 
 import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
 
 import java.util.List;
 
@@ -11,7 +10,10 @@ import java.util.List;
 
 public abstract class Command implements CommandExecutor {
     public abstract String getName();
+
     public abstract String getDescription();
+
     public abstract List<String> getAliases();
+
     public abstract List<String> getUsageInstructions();
 }
