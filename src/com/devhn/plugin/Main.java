@@ -1,5 +1,6 @@
 package com.devhn.plugin;
 
+import com.devhn.plugin.Commands.Commands;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -7,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 
 public class Main extends JavaPlugin {
+
     @Override
     public void onEnable() {
         setupPlugin();
@@ -19,5 +21,6 @@ public class Main extends JavaPlugin {
 
     private void setupPlugin() {
         getServer().getLogger().info("[ DevHN ] 플러그인을 성공적으로 실행하였습니다.");
+        getCommand("hr").setExecutor(new Commands());
     }
 }
