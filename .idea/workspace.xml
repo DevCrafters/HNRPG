@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98ad1575-5685-4613-9234-1964fba11d40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/devhn/plugin/Commands/Commands.java" afterPath="$PROJECT_DIR$/src/com/devhn/plugin/Commands/Commands.java" />
     </list>
@@ -585,12 +585,12 @@
       <workItem from="1500647364971" duration="2837000" />
       <workItem from="1500694736007" duration="6855000" />
       <workItem from="1500725559238" duration="215000" />
-      <workItem from="1500725838039" duration="366000" />
+      <workItem from="1500725838039" duration="492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29659000" />
+    <option name="totallyTimeSpent" value="29785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
