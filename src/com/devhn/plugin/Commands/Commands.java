@@ -12,6 +12,9 @@ public class Commands implements CommandExecutor {
 
     private static final String INFO_PREFIX = "§c[ §4§li §c] ";
     private static final String NOTICE_PREFIX = "§c[ §4§l! §c] ";
+    private static final String NOTE_PREFIX = "§c[ §4§l+ §c] ";
+    private static final String ADD_PREFIX = "§c[ §4§l+ §c] ";
+    private static final String REMOVE_PREFIX = "§c[ §4§l- §c] ";
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
@@ -19,7 +22,7 @@ public class Commands implements CommandExecutor {
 
         if (args[0].equalsIgnoreCase("help")) {
             sender.sendMessage(INFO_PREFIX + "§f§l도움말 -");
-            sender.sendMessage("추후 명령어 기능 생기면 여기다 넣을겁니다.");
+            sender.sendMessage(NOTE_PREFIX + "§3§l상세한 명령어 기능§7은 §3§l명령어만 치게 되면 §7나옵니다.");
             //TODO: 명령어 기능 생길 때 마다 Help 커맨드 작성하기
             if (!isOp) {
                 sender.sendMessage("for OP");
