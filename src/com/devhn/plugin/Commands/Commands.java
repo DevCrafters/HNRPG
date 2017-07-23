@@ -37,9 +37,32 @@ public class Commands implements CommandExecutor {
                 //TODO: skill 추가 클래스 구현 후 넣기
             } else if (args[1].equalsIgnoreCase("enchantment")) {
                 //TODO: enchantment 추가 클래스 구현 후 넣기
+            } else {
+                sender.sendMessage(INFO_PREFIX + "§f§ladd 커맨드 정보 -");
+                sender.sendMessage("§3§l/hr add lore §7- 아이템에 §3§l설명을 추가§7합니다.");
+                sender.sendMessage("§3§l/hr add skill §7- 아이템에 §3§l스킬을 추가§7합니다.");
+                sender.sendMessage("§3§l/hr add enchantment §7- 아이템에 §3§l마법을 부여§7합니다.");
             }
+
+        } else if (args[0].equalsIgnoreCase("remove")) {
+            if (args[1].equalsIgnoreCase("lore")) {
+                //TODO: lore 삭제 클래스 구현 후 넣기
+            } else if (args[1].equalsIgnoreCase("skill")) {
+                //TODO: skill 삭제 클래스 구현 후 넣기
+            } else if (args[1].equalsIgnoreCase("enchantment")) {
+                //TODO: enchantment 삭제 클래스 구현 후 넣기
+            } else if (args[1].equalsIgnoreCase("all")) {
+                //TODO: 모든 부속물 삭제 클래스 구현 후 넣기
+            } else {
+                sender.sendMessage(INFO_PREFIX + "§f§lremove 커맨드 정보 -");
+                sender.sendMessage("§3§l/hr remove lore §7- 아이템의 §3§l설명을 삭제§7합니다.");
+                sender.sendMessage("§3§l/hr remove skill §7- 아이템의 §3§l스킬을 삭제§7합니다.");
+                sender.sendMessage("§3§l/hr remove enchantment §7- 아이템의 §3§l마법을 삭제§7합니다.");
+                sender.sendMessage("§3§l/hr remove all §7- 아이템의 §3§l부속물들을 삭제§7합니다.");
+            }
+        } else {
+            sender.sendMessage(INFO_PREFIX + "§3§l/hr help §7를 통해 더 많은 §3§l명령어§7를 알아보세요.");
         }
-        sender.sendMessage(INFO_PREFIX + "§3§l/hr help §7를 통해 더 많은 §3§l명령어§7를 알아보세요.");
 
         return true;
     }
