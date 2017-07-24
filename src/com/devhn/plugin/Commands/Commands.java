@@ -20,7 +20,7 @@ public class Commands implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         boolean isOp = sender.isOp();
 
-        if (args.length > 0) {
+        if (args.length != 0) {
             if (args[0].equalsIgnoreCase("help")) {
                 sender.sendMessage(INFO_PREFIX + "§f§l도움말 -");
                 sender.sendMessage(NOTE_PREFIX + "§3§l상세한 명령어 기능§7은 §3§l명령어만 치게 되면 §7나옵니다.");
