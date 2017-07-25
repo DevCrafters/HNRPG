@@ -26,6 +26,8 @@ public class Commands implements CommandExecutor {
         if (args.length != 0) {
             if (args[0].equalsIgnoreCase("help")) {
                 sender.sendMessage(INFO_PREFIX + "§f§l도움말 -");
+                sender.sendMessage("§7- §3§l/hr create §7- 여러 §3§l부속물을 생성§7합니다.");
+                sender.sendMessage("§7- §3§l/hr set §7- 여러 §3§l옵션을 설정§7합니다.");
                 sender.sendMessage("§7- §3§l/hr add §7- 아이템에 §3§l부속물을 추가§7합니다.");
                 sender.sendMessage("§7- §3§l/hr remove §7- 아이템에 §3§l부속물을 삭제§7합니다.");
                 sender.sendMessage(NOTE_PREFIX + "§3§l상세한 명령어 기능§7은 §3§l명령어만 치게 되면 §7나옵니다.");
@@ -37,6 +39,41 @@ public class Commands implements CommandExecutor {
             } else if (args[0].equalsIgnoreCase("info")) {
                 sender.sendMessage(INFO_PREFIX + "§f§l정보 -");
                 sender.sendMessage("- §7이 §3§l플러그인§7은 §3§l개발자 DevHN§7가 제작하였습니다.");
+
+            } else if (args[0].equalsIgnoreCase("create")) {
+                if (args.length <= 1) {
+                    sender.sendMessage(INFO_PREFIX + "§f§lcreate 커맨드 정보 -");
+                    sender.sendMessage("§7- §3§l/hr create item §7- §3§아이템을 생성§7합니다.");
+                    sender.sendMessage("§7- §3§l/hr create block §7- §3§l블럭을 생성§7합니다.");
+                    sender.sendMessage("§7- §3§l/hr create npc §7- §3§lNPC를 생성§7합니다.");
+                    sender.sendMessage("§7- §3§l/hr create world §7- §3§l월드를 생성§7합니다.");
+                } else {
+                    if (args[1].equalsIgnoreCase("item")) {
+
+                    } else if (args[1].equalsIgnoreCase("block")) {
+
+                    } else if (args[1].equalsIgnoreCase("npc")) {
+
+                    } else if (args[1].equalsIgnoreCase("world")) {
+
+                    }
+                }
+
+            } else if (args[0].equalsIgnoreCase("set")) {
+                if (args.length <= 1) {
+                    sender.sendMessage(INFO_PREFIX + "§f§lset 커맨드 정보 -");
+                    sender.sendMessage("§7- §3§l/hr set event §7- §3§l이벤트를 설정§7합니다.");
+                    sender.sendMessage("§7- §3§l/hr set path §7- §3§lNPC가 다닐 길을 설정§7합니다.");
+                    sender.sendMessage("§7- §3§l/hr set world §7- §3§l월드의 옵션을 설정§7합니다.");
+                } else {
+                    if (args[1].equalsIgnoreCase("event")) {
+
+                    } else if (args[1].equalsIgnoreCase("path")) {
+
+                    } else if (args[1].equalsIgnoreCase("world")) {
+
+                    }
+                }
 
             } else if (args[0].equalsIgnoreCase("add")) {
                 if (args.length <= 1) {
@@ -51,7 +88,9 @@ public class Commands implements CommandExecutor {
                         StringJoiner j = new StringJoiner(" ");
                         for (int i=2; i < args.length; i++) {
                             j.add(args[i]);
-                        } j.toString();
+                        }
+
+
                     } else if (args[1].equalsIgnoreCase("skill")) {
                         //TODO: skill 추가 클래스 구현 후 넣기
                     } else if (args[1].equalsIgnoreCase("enchantment")) {
