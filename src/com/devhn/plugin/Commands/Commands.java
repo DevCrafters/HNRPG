@@ -1,8 +1,11 @@
 package com.devhn.plugin.Commands;
 
+import com.devhn.plugin.function.Lore;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+
+import java.util.StringJoiner;
 
 /**
  * Created by DevHN on 10/07/2017.
@@ -38,12 +41,17 @@ public class Commands implements CommandExecutor {
             } else if (args[0].equalsIgnoreCase("add")) {
                 if (args.length <= 1) {
                     sender.sendMessage(INFO_PREFIX + "§f§ladd 커맨드 정보 -");
-                    sender.sendMessage("§7- §3§l/hr add lore §7- 아이템에 §3§l설명을 추가§7합니다.");
+                    sender.sendMessage("§7- §3§l/hr add lore <줄 수> <설명> §7- 아이템에 §3§l설명을 추가§7합니다.");
                     sender.sendMessage("§7- §3§l/hr add skill §7- 아이템에 §3§l스킬을 추가§7합니다.");
                     sender.sendMessage("§7- §3§l/hr add enchantment §7- 아이템에 §3§l마법을 부여§7합니다.");
                 } else {
                     if (args[1].equalsIgnoreCase("lore")) {
-                        //TODO: lore 추가 클래스 구현 후 넣기
+                        Lore.setTempStr(args[2]);
+
+                        StringJoiner j = new StringJoiner(" ");
+                        for (int i=2; i < args.length; i++) {
+                            j.add(args[i]);
+                        } j.toString();
                     } else if (args[1].equalsIgnoreCase("skill")) {
                         //TODO: skill 추가 클래스 구현 후 넣기
                     } else if (args[1].equalsIgnoreCase("enchantment")) {
@@ -53,7 +61,7 @@ public class Commands implements CommandExecutor {
             } else if (args[0].equalsIgnoreCase("remove")) {
                 if (args.length <= 1) {
                     sender.sendMessage(INFO_PREFIX + "§f§lremove 커맨드 정보 -");
-                    sender.sendMessage("§7- §3§l/hr remove lore §7- 아이템의 §3§l설명을 삭제§7합니다.");
+                    sender.sendMessage("§7- §3§l/hr remove lore <줄 수/all> §7- 아이템의 §3§l설명을 삭제§7합니다.");
                     sender.sendMessage("§7- §3§l/hr remove skill §7- 아이템의 §3§l스킬을 삭제§7합니다.");
                     sender.sendMessage("§7- §3§l/hr remove enchantment §7- 아이템의 §3§l마법을 삭제§7합니다.");
                     sender.sendMessage("§7- §3§l/hr remove all §7- 아이템의 §3§l부속물들을 삭제§7합니다.");
