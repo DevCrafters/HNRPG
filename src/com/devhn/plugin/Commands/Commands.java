@@ -49,13 +49,13 @@ public class Commands implements CommandExecutor {
                     sender.sendMessage("§7- §3§l/hr create world §7- §3§l월드를 생성§7합니다.");
                 } else {
                     if (args[1].equalsIgnoreCase("item")) {
-
+                        //TODO: item 생성 클래스 구현 후 넣기
                     } else if (args[1].equalsIgnoreCase("block")) {
-
+                        //TODO: block 생성 클래스 구현 후 넣기
                     } else if (args[1].equalsIgnoreCase("npc")) {
-
+                        //TODO: npc 생성 클래스 구현 후 넣기
                     } else if (args[1].equalsIgnoreCase("world")) {
-
+                        //TODO: world 생성 클래스 구현 후 넣기
                     }
                 }
 
@@ -67,11 +67,11 @@ public class Commands implements CommandExecutor {
                     sender.sendMessage("§7- §3§l/hr set world §7- §3§l월드의 옵션을 설정§7합니다.");
                 } else {
                     if (args[1].equalsIgnoreCase("event")) {
-
+                        //TODO: event 설정 클래스 구현 후 넣기
                     } else if (args[1].equalsIgnoreCase("path")) {
-
+                        //TODO: path 설정 클래스 구현 후 넣기
                     } else if (args[1].equalsIgnoreCase("world")) {
-
+                        //TODO: world 설정 클래스 구현 후 넣기
                     }
                 }
 
@@ -89,7 +89,6 @@ public class Commands implements CommandExecutor {
                         for (int i=2; i < args.length; i++) {
                             j.add(args[i]);
                         }
-
 
                     } else if (args[1].equalsIgnoreCase("skill")) {
                         //TODO: skill 추가 클래스 구현 후 넣기
