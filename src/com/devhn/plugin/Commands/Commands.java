@@ -23,6 +23,11 @@ public class Commands implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         boolean isOp = sender.isOp();
 
+        StringJoiner j = new StringJoiner(" ");
+        for (int i = 2; i < args.length; i++) {
+            j.add(args[i]);
+        }
+
         if (args.length != 0) {
             if (args[0].equalsIgnoreCase("help")) {
                 sender.sendMessage(INFO_PREFIX + "§f§l도움말 -");
@@ -84,12 +89,6 @@ public class Commands implements CommandExecutor {
                 } else {
                     if (args[1].equalsIgnoreCase("lore")) {
                         Lore.setTempStr(args[2]);
-
-                        StringJoiner j = new StringJoiner(" ");
-                        for (int i=2; i < args.length; i++) {
-                            j.add(args[i]);
-                        }
-
                     } else if (args[1].equalsIgnoreCase("skill")) {
                         //TODO: skill 추가 클래스 구현 후 넣기
                     } else if (args[1].equalsIgnoreCase("enchantment")) {
