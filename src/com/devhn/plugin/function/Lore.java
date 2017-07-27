@@ -5,8 +5,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.MaterialData;
 
-import java.util.List;
-
 public class Lore {
 
     public static String tempStr;
@@ -15,14 +13,12 @@ public class Lore {
         return str = tempStr;
     }
 
-    public void addLore(int ID, int DATA, int STACK, List<String> Lore, CommandSender sender) {
+    public void addLore(int ID, int DATA, int STACK, String[] Lore, CommandSender sender) {
         try {
             Integer.parseInt(String.valueOf(tempStr));
 
             ItemStack itemStack = new MaterialData(ID, (byte) DATA).toItemStack(STACK);
             ItemMeta itemMeta = itemStack.getItemMeta();
-
-            itemMeta.setLore(Lore);
 
         } catch (NumberFormatException e) {
             sender.sendMessage("§c[ §4§l! §c] §3§l줄 수§7를 입력해주세요.");
