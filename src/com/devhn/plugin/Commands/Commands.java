@@ -5,6 +5,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
+import java.util.List;
 import java.util.StringJoiner;
 
 /**
@@ -20,13 +21,8 @@ public class Commands implements CommandExecutor {
     private static final String REMOVE_PREFIX = "§c[ §4§l- §c] ";
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
+    public boolean onCommand(CommandSender sender, Command command, String str, String[] args) {
         boolean isOp = sender.isOp();
-
-        StringJoiner j = new StringJoiner(" ");
-        for (int i = 2; i < args.length; i++) {
-            j.add(args[i]);
-        }
 
         if (args.length != 0) {
             if (args[0].equalsIgnoreCase("help")) {
@@ -89,6 +85,14 @@ public class Commands implements CommandExecutor {
                 } else {
                     if (args[1].equalsIgnoreCase("lore")) {
                         Lore.setTempStr(args[2]);
+
+                        StringJoiner j = new StringJoiner(" ");
+                        for (int i = 2; i < args.length; i++) {
+                            j.add(args[i]);
+                        }
+
+                        String loreStr = j.toString();
+
                     } else if (args[1].equalsIgnoreCase("skill")) {
                         //TODO: skill 추가 클래스 구현 후 넣기
                     } else if (args[1].equalsIgnoreCase("enchantment")) {
