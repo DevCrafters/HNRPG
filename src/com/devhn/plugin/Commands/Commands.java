@@ -91,8 +91,6 @@ public class Commands implements CommandExecutor {
                             j.add(args[i]);
                         }
 
-                        String loreStr = j.toString();
-
                     } else if (args[1].equalsIgnoreCase("skill")) {
                         //TODO: skill 추가 클래스 구현 후 넣기
                     } else if (args[1].equalsIgnoreCase("enchantment")) {
