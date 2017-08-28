@@ -5,7 +5,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.MaterialData;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Lore {
